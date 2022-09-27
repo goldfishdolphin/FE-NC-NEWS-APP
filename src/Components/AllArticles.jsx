@@ -1,26 +1,32 @@
 import { useEffect, useState } from "react";
-import axios from 'axios';
 import { Link } from "react-router-dom";
+import { getArticles } from "../Utils/api";
+import moment from 'moment';
 
 const AllArticles = () => {
     const [articles, setArticles] = useState([]);
     useEffect(() => {
-        axios
-            .get(`https://nc-news-july.herokuapp.com/api/articles`)
-            .then(({ data }) => {
-                console.log(data.articles);
-                setArticles(data.articles);
+        getArticles()
+            .then(({ articles }) => {
+                setArticles(articles);
             });
     }, []);
     return (
-        <main id="all_main">
+
+        <main id="articles_main">
             <ul>
                 {articles.map((article) => {
                     return (
-                        <Link to={`/items/${article.article_id}`}>
-                            {' '}
-                            <li key={article.article_id.item_id}>{article.title} </li>
-                        </Link>
+
+                        <li key={article.article_id}>
+                            <h3>{article.title}</h3>
+                            <p>author: {article.author}</p>
+                            <p> {moment(article.created_at).format('dddd, MMMM Do YYYY')}</p>
+                            <p>Topic: {article.topic}</p>
+                        </li>
+
+
+
                     );
                 })}
             </ul>

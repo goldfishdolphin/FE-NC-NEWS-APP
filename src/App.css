@@ -43,3 +43,7 @@ nav a:hover {
 nav a:active {
   color: inherit;
 }
+#articles_main{
+  text-align: center;
+
+}

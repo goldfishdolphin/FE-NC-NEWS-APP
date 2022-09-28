@@ -5,6 +5,7 @@ import Articles from './Pages/Articles';
 import Home from './Pages/Home';
 import TopicsPage from './Pages/TopicsPage';
 import ArticlesByTopicPage from './Pages/ArticlesByTopicPage';
+import Article from './Pages/Article';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path='/articles' element={<Articles />}>  </Route>
         <Route path='/topics' element={<TopicsPage />}>  </Route>
         <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>
+        <Route path='/articles/:article_id' element={<Article />}>  </Route>
+
       </Routes>
 
 

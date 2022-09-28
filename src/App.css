@@ -47,3 +47,14 @@ nav a:active {
   text-align: center;
 
 }
+#article_main{
+  text-align: center;
+  border: #74bbc2;
+  border-style: dashed;
+  border-width: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+ vote_msg{
+  color: red;
+}

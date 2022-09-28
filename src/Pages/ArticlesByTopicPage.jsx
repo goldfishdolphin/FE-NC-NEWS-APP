@@ -1,10 +1,10 @@
 import Nav from "../Components/Nav";
-import ArticlesByTopic from "../Components/ArticlesByTopic";
+import AllArticles from "../Components/AllArticles";
 const ArticlesByTopicPage = () => {
     return (
         <div>
             <Nav />
-            <ArticlesByTopic />
+            <AllArticles />
         </div>
     );
 

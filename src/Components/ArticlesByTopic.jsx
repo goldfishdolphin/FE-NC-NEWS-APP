@@ -6,7 +6,6 @@ import moment from "moment";
 const ArticlesByTopic = () => {
     const [articlesByTopic, setArticlesByTopic] = useState([]);
     const { topic } = useParams();
-    console.log(topic);
     useEffect(() => {
         getArticlesBySlug(topic)
             .then(({ articles }) => {

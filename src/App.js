@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Articles from './Pages/Articles';
 import Home from './Pages/Home';
 import TopicsPage from './Pages/TopicsPage';
+import ArticlesByTopicPage from './Pages/ArticlesByTopicPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Home />}>  </Route>
         <Route path='/articles' element={<Articles />}>  </Route>
         <Route path='/topics' element={<TopicsPage />}>  </Route>
+        <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>
       </Routes>
 
 

@@ -17,13 +17,17 @@ const AllArticles = () => {
             <ul>
                 {articles.map((article) => {
                     return (
+                        <div>
+                            <li key={article.article_id}>
+                                <h3>{article.title}</h3>
+                                <p>author: {article.author}</p>
+                                <p> {moment(article.created_at).format('dddd, MMMM Do YYYY')}</p>
+                                <p>Topic: {article.topic}</p>
+                            </li>
 
-                        <li key={article.article_id}>
-                            <h3>{article.title}</h3>
-                            <p>author: {article.author}</p>
-                            <p> {moment(article.created_at).format('dddd, MMMM Do YYYY')}</p>
-                            <p>Topic: {article.topic}</p>
-                        </li>
+                            <Link to={`/articles/${article.article_id}`}>Read
+                            </Link>
+                        </div>
 
 
 

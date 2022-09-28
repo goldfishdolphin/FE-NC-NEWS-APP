@@ -1,4 +1,3 @@
-import AllArticles from '../Components/AllArticles';
 import Nav from '../Components/Nav';
 
 const Home = () => {

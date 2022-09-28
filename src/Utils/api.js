@@ -8,3 +8,13 @@ export const getArticles = () => {
         return res.data;
     });
 };
+export const getTopics = () => {
+    return articlesApi.get('/topics').then((res) => {
+        return res.data;
+    });
+};
+export const getArticlesBySlug = (topic) => {
+    return articlesApi.get(`/articles?topic=${topic}`).then((res) => {
+        return res.data;
+    });
+};

@@ -15,7 +15,7 @@ const Comments = () => {
     return (
         <section id="comments">
             <h3>Comments</h3>
-
+            <CommentAdder />
             <ol className="comments_list">
                 {comments.map((comment) => {
                     return (

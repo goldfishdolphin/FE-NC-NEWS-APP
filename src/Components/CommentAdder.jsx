@@ -8,7 +8,7 @@ const CommentAdder = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         postComments(article_id, newComment).then(({ comment }) => {
-            console.log(comment);
+            setNewComment(comment);
         });
     };
 

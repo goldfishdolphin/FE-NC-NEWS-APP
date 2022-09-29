@@ -22,20 +22,18 @@ export const getArticle = (article_id) => {
 export const patchArticle = (article_id) => {
     const votesInc = { inc_votes: 1 };
     return articlesApi.patch(`/articles/${article_id}`, votesInc).then((res) => {
-<<<<<<< HEAD
         return res.data;
     });
 };
 export const getComments = (article_id) => {
-    return articlesApi.get(`/articles/${article_id}/comments`).then((res) => {
-=======
+    return articlesApi.get(`articles/${article_id}/comments`).then((res) => {
         console.log(res.data);
->>>>>>> af6a9d9 (Revert "Comments by article")
         return res.data;
     });
 };
 export const postComments = (article_id, newComment) => {
     return articlesApi.post(`/articles/${article_id}/comments`, newComment).then((res) => {
+
 
         return res.data;
     });

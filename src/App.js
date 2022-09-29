@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import TopicsPage from './Pages/TopicsPage';
 import ArticlesByTopicPage from './Pages/ArticlesByTopicPage';
 import Article from './Pages/Article';
+import CommentsPage from './Pages/CommentsPage';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path='/topics' element={<TopicsPage />}>  </Route>
         <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>
         <Route path='/articles/:article_id' element={<Article />}>  </Route>
+        <Route path='/articles/:article_id/comments' element={<CommentsPage />}>  </Route>
+
 
       </Routes>
 

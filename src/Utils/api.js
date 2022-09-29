@@ -26,8 +26,14 @@ export const patchArticle = (article_id) => {
     });
 };
 export const getComments = (article_id) => {
-    return articlesApi.get(`articles/${article_id}/comments`).then((res) => {
+    return articlesApi.get(`/articles/${article_id}/comments`).then((res) => {
+        return res.data;
+    });
+};
+export const postComments = (article_id, newComment) => {
+    return articlesApi.post(`/articles/${article_id}/comments`, newComment).then((res) => {
         console.log(res.data);
         return res.data;
     });
 };
+

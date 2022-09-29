@@ -33,7 +33,6 @@ export const getComments = (article_id) => {
 export const postComments = (article_id, newComment) => {
     return articlesApi.post(`/articles/${article_id}/comments`, newComment).then((res) => {
 
-        console.log(res.data);
         return res.data;
     });
 };

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticle, patchArticle } from "../Utils/api";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const IndividualArticle = () => {
     const { article_id } = useParams();
@@ -17,7 +18,7 @@ const IndividualArticle = () => {
             setVotesInc((currVotes) => currVotes + 1);
             setHasVoted(true);
         } else {
-            setVotesMsg('You have already voted. Sorry you cannot vote more than once.');
+            setVotesMsg('⛔ You have already voted. Sorry you cannot vote more than once.');
 
         }
     };
@@ -40,6 +41,7 @@ const IndividualArticle = () => {
                 <li>Votes :{article.votes}</li>
                 <button onClick={() => handleVotesIncrement(article.article_id)}>{votesInc}<span aria-label={`votes for article ${article.title}`}> 👍</span></button>
                 <p id='vote_msg'>{votesMsg}</p>
+                <Link to={`/articles/${article.article_id}/comments`}>View Comments ✍️ </Link>
 
 
             </ul>

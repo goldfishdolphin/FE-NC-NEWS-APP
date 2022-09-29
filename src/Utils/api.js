@@ -27,6 +27,7 @@ export const patchArticle = (article_id) => {
 };
 export const getComments = (article_id) => {
     return articlesApi.get(`/articles/${article_id}/comments`).then((res) => {
+        console.log(res.data);
         return res.data;
     });
 };

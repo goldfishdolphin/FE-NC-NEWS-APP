@@ -8,6 +8,7 @@ const Comments = () => {
     useEffect(() => {
         getComments(article_id)
             .then(({ comments }) => {
+                console.log(comments);
                 setComments(comments);
             });
 

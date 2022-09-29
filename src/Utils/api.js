@@ -3,8 +3,8 @@ const articlesApi = axios.create({
     baseURL: "https://nc-news-july.herokuapp.com/api"
 });
 
-export const getArticles = () => {
-    return articlesApi.get('/articles').then((res) => {
+export const getArticles = (topic) => {
+    return articlesApi.get('/articles', { params: { topic } }).then((res) => {
         return res.data;
     });
 };
@@ -13,8 +13,16 @@ export const getTopics = () => {
         return res.data;
     });
 };
-export const getArticlesBySlug = (topic) => {
-    return articlesApi.get(`/articles?topic=${topic}`).then((res) => {
+
+export const getArticle = (article_id) => {
+    return articlesApi.get(`/articles/${article_id}`).then((res) => {
+        return res.data;
+    });
+};
+export const patchArticle = (article_id) => {
+    const votesInc = { inc_votes: 1 };
+    return articlesApi.patch(`/articles/${article_id}`, votesInc).then((res) => {
+        console.log(res.data);
         return res.data;
     });
 };

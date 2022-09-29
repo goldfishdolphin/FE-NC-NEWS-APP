@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getArticles } from "../Utils/api";
 import moment from 'moment';
 
 const AllArticles = () => {
+    const { topic } = useParams();
     const [articles, setArticles] = useState([]);
     useEffect(() => {
-        getArticles()
+        getArticles(topic)
             .then(({ articles }) => {
                 setArticles(articles);
             });
-    }, []);
+    }, [topic]);
     return (
 
         <main id="articles_main">
@@ -25,7 +26,7 @@ const AllArticles = () => {
                                 <p>Topic: {article.topic}</p>
                             </li>
 
-                            <Link to={`/articles/${article.article_id}`}>Read
+                            <Link to={`/articles/${article.article_id}`}>View Details
                             </Link>
                         </div>
 

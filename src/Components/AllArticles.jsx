@@ -9,7 +9,7 @@ const AllArticles = () => {
     const { topic } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [articles, setArticles] = useState([]);
-    const { searchParams } = useSearchParams();
+    const [searchParams, setSearchParams] = useSearchParams();
     const sort_by = searchParams.get('sort_by');
     const order = searchParams.get('order');
     useEffect(() => {

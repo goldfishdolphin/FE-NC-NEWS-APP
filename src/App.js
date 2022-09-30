@@ -10,6 +10,7 @@ import Comments from './Components/Comments';
 import Users from './Components/Users';
 import { useContext } from 'react';
 import { UserContext } from './contexts/User';
+import CommentToDel from './Components/CommentToDel';
 
 function App() {
   const value = useContext(UserContext);
@@ -26,6 +27,9 @@ function App() {
           <Route path='/articles/:article_id' element={<Article />}>  </Route>
           <Route path='/articles/:article_id/comments' element={<Comments />}>  </Route>
           <Route path='/users' element={<Users />}>  </Route>
+          <Route path='/comments/:comment_id' element={<CommentToDel />}>  </Route>
+
+
         </Routes>
       </div>
     </BrowserRouter >

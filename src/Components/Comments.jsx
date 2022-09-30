@@ -4,6 +4,7 @@ import { getComments } from "../Utils/api";
 import CommentAdder from "./CommentAdder";
 const Comments = () => {
     const [comments, setComments] = useState([]);
+    const [CommentToDel, setCommentToDel] = useState(null);
     const { article_id } = useParams();
     useEffect(() => {
         getComments(article_id)
@@ -26,6 +27,7 @@ const Comments = () => {
                             <p>{comment.body}</p>
                             <p className="emo">✍️</p>
                             <p>{' '}</p>
+                            <button onClick={() => { }}>Delete</button>
                         </li>
                     );
                 })}

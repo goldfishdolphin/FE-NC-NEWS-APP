@@ -22,7 +22,7 @@ function App() {
           <Route path='/' element={<Home />}>  </Route>
           <Route path='/articles' element={<Articles />}>  </Route>
           <Route path='/topics' element={<TopicsPage />}>  </Route>
-          <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>
+          <Route path='/topics/:slug' element={<ArticlesByTopicPage />}>  </Route>
           <Route path='/articles/:article_id' element={<Article />}>  </Route>
           <Route path='/articles/:article_id/comments' element={<Comments />}>  </Route>
           <Route path='/users' element={<Users />}>  </Route>

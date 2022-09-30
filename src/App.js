@@ -19,8 +19,7 @@ function App() {
         <button onClick={() => { value.setLoggedInUser(null); }}>Log out</button>
         <Header />
         <Routes>
-          <Route path='/' element={<Users />}>  </Route>
-          <Route path='/home' element={<Home />}>  </Route>
+          <Route path='/' element={<Home />}>  </Route>
           <Route path='/articles' element={<Articles />}>  </Route>
           <Route path='/topics' element={<TopicsPage />}>  </Route>
           <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>

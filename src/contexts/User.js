@@ -9,6 +9,6 @@ export const UserProvider = (props) => {
         "avatar_url": "https://vignette.wikia.nocookie.net/mrmen/images/d/d6/Mr-Tickle-9a.png/revision/latest?cb=20180127221953"
     });
     return (
-        <UserContext.Provider value={loggedInUser}>{props.children}</UserContext.Provider>
+        <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>{props.children}</UserContext.Provider>
     );
 };

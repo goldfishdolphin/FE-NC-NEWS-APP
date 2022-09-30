@@ -13,10 +13,10 @@ import { UserContext } from './contexts/User';
 
 function App() {
   const value = useContext(UserContext);
-  console.log(value, '....value');
   return (
     <BrowserRouter>
       <div className="App">
+        <button onClick={() => { value.setLoggedInUser(null); }}>Log out</button>
         <Header />
         <Routes>
           <Route path='/' element={<Home />}>  </Route>
@@ -28,7 +28,7 @@ function App() {
           <Route path='/users' element={<Users />}>  </Route>
         </Routes>
       </div>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 

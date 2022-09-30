@@ -8,25 +8,28 @@ const Comments = () => {
     useEffect(() => {
         getComments(article_id)
             .then(({ comments }) => {
-                console.log(comments);
                 setComments(comments);
             });
 
     }, [article_id]);
+
+
     return (
         <section id="comments">
             <h3>Comments</h3>
-            <CommentAdder />
+            <CommentAdder setComments={setComments} />
             <ol className="comments_list">
                 {comments.map((comment) => {
                     return (
                         <li key={comment.comment_id}>
+                            <p>posted by: {comment.author}</p>
                             <p>{comment.body}</p>
                             <p className="emo">✍️</p>
                             <p>{' '}</p>
                         </li>
                     );
                 })}
+
 
             </ol>
         </section>

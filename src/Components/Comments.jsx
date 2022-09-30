@@ -13,6 +13,7 @@ const Comments = () => {
 
     }, [article_id]);
 
+
     return (
         <section id="comments">
             <h3>Comments</h3>
@@ -28,6 +29,7 @@ const Comments = () => {
                         </li>
                     );
                 })}
+
 
             </ol>
         </section>

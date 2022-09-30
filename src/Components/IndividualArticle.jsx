@@ -14,9 +14,11 @@ const IndividualArticle = () => {
 
     const handleVotesIncrement = (article_id) => {
         if (!hasVoted) {
-            patchArticle(article_id);
-            setVotesInc((currVotes) => currVotes + 1);
-            setHasVoted(true);
+            patchArticle(article_id).then(() => {
+                setVotesInc((currVotes) => currVotes + 1);
+                setHasVoted(true);
+            });
+
         } else {
             setVotesMsg('⛔ You have already voted. Sorry you cannot vote more than once.');
 
@@ -33,12 +35,12 @@ const IndividualArticle = () => {
     return (
         <main className="article_main">
             <h4>{article.title}</h4>
-            <ul>
+            <ul key={article.article_id}>
                 <li>author: {article.author}</li>
                 <li> {moment(article.created_at).format('dddd, MMMM Do YYYY')}</li>
                 <li>Topic: {article.topic}</li>
                 <li>Comments Count: {article.comment_count}</li>
-                <li>Votes :{article.votes}</li>
+                <li>Votes :{votesInc}</li>
                 <button onClick={() => handleVotesIncrement(article.article_id)}>{votesInc}<span aria-label={`votes for article ${article.title}`}> 👍</span></button>
                 <p id='vote_msg'>{votesMsg}</p>
                 <Link to={`/articles/${article.article_id}/comments`}>View Comments ✍️ </Link>

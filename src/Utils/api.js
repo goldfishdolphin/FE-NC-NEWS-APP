@@ -36,4 +36,10 @@ export const postComments = (article_id, newComment) => {
         return res.data;
     });
 };
+export const getUsers = () => {
+    return articlesApi.get(`/users`).then((res) => {
+        console.log(res.data);
+        return res.data;
+    });
+};
 

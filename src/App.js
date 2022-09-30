@@ -17,9 +17,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <button onClick={() => { value.setLoggedInUser(null); }}>Log out</button>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />}>  </Route>
+          <Route path='/' element={<h2>interesting stuff</h2>}>  </Route>
+          <Route path='/home' element={<Home />}>  </Route>
           <Route path='/articles' element={<Articles />}>  </Route>
           <Route path='/topics' element={<TopicsPage />}>  </Route>
           <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>
@@ -28,7 +30,7 @@ function App() {
           <Route path='/users' element={<Users />}>  </Route>
         </Routes>
       </div>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 

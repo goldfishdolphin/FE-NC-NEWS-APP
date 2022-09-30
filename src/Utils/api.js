@@ -27,18 +27,17 @@ export const patchArticle = (article_id) => {
 };
 export const getComments = (article_id) => {
     return articlesApi.get(`/articles/${article_id}/comments`).then((res) => {
-        console.log(res.data);
         return res.data;
     });
 };
-export const postComments = (article_id, newComment) => {
-    return articlesApi.post(`/articles/${article_id}/comments`, newComment).then((res) => {
+export const postComments = (article_id, user, body) => {
+
+    return articlesApi.post(`/articles/${article_id}/comments`, { username: user.username, body: body }).then((res) => {
         return res.data;
     });
 };
 export const getUsers = () => {
     return articlesApi.get(`/users`).then((res) => {
-        console.log(res.data);
         return res.data;
     });
 };

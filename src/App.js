@@ -13,14 +13,13 @@ import { UserContext } from './contexts/User';
 
 function App() {
   const value = useContext(UserContext);
-  console.log(value, '....value');
   return (
     <BrowserRouter>
       <div className="App">
         <button onClick={() => { value.setLoggedInUser(null); }}>Log out</button>
         <Header />
         <Routes>
-          <Route path='/' element={<h2>interesting stuff</h2>}>  </Route>
+          <Route path='/' element={<Users />}>  </Route>
           <Route path='/home' element={<Home />}>  </Route>
           <Route path='/articles' element={<Articles />}>  </Route>
           <Route path='/topics' element={<TopicsPage />}>  </Route>

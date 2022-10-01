@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { getComments } from "../Utils/api";
+import { getComments, delComment } from "../Utils/api";
 import CommentAdder from "./CommentAdder";
+import { UserContext } from "../contexts/User";
+
 const Comments = () => {
     const [comments, setComments] = useState([]);
+    const { loggedInUser } = useContext(UserContext);
     const { article_id } = useParams();
     useEffect(() => {
         getComments(article_id)
@@ -12,6 +16,10 @@ const Comments = () => {
             });
 
     }, [article_id]);
+    const handleDeleteComment = (e, comment_id) => {
+        e.preventDefault();
+        delComment(comment_id);
+    };
 
 
     return (
@@ -26,6 +34,8 @@ const Comments = () => {
                             <p>{comment.body}</p>
                             <p className="emo">✍️</p>
                             <p>{' '}</p>
+                            {comment.author === loggedInUser.username ? (<button onClick={(e) => { handleDeleteComment(e, comment.comment_id); }}>Delete</button>) : ("")}
+
                         </li>
                     );
                 })}

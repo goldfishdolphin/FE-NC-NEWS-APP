@@ -43,8 +43,8 @@ export const getUsers = () => {
 };
 
 export const delComment = (comment_id) => {
-    return articlesApi.get(`/comments/${comment_id}`).then((res) => {
-        return res.data;
+    return articlesApi.delete(`/comments/${comment_id}`).then((res) => {
+        return res;
     });
 }
 

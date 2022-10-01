@@ -6,6 +6,8 @@ const Nav = () => {
                 <Link to={'/'}> <li>Home</li></Link>
                 <Link to={'/articles'}> <li>Articles</li></Link>
                 <Link to={`/topics`}> <li>Topics</li> </Link>
+                <Link to={`/users`}> <li>Users</li> </Link>
+
 
             </ul>
         </nav>

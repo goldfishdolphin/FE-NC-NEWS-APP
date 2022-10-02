@@ -10,7 +10,7 @@ import Comments from './Components/Comments';
 import Users from './Components/Users';
 import { useContext } from 'react';
 import { UserContext } from './contexts/User';
-import CommentToDel from './Components/CommentToDel';
+import NonExistingPage from './Pages/NonExistingPage';
 
 function App() {
   const value = useContext(UserContext);
@@ -27,9 +27,8 @@ function App() {
           <Route path='/articles/:article_id' element={<Article />}>  </Route>
           <Route path='/articles/:article_id/comments' element={<Comments />}>  </Route>
           <Route path='/users' element={<Users />}>  </Route>
-          <Route path='/comments/:comment_id' element={<CommentToDel />}>  </Route>
-
-
+          <Route path="*" element={<NonExistingPage />}></Route>
+          {/* <Route path="/articles/notAnId" element={<NonExistingArticle />}></Route> */}
         </Routes>
       </div>
     </BrowserRouter >

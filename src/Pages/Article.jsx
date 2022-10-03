@@ -1,3 +1,4 @@
+import React from "react";
 import IndividualArticle from "../Components/IndividualArticle";
 import Nav from "../Components/Nav";
 

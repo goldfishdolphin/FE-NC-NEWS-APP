@@ -1,3 +1,4 @@
+import React from "react";
 import Nav from "../Components/Nav";
 import AllArticles from "../Components/AllArticles";
 const ArticlesByTopicPage = () => {

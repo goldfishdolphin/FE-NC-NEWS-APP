@@ -1,11 +1,11 @@
 import React from "react";
 import Nav from "../Components/Nav";
-import AllArticles from "../Components/AllArticles";
+import ArticlesByTopic from "../Components/ArticlesByTopic";
 const ArticlesByTopicPage = () => {
     return (
         <div>
             <Nav />
-            <AllArticles />
+            <ArticlesByTopic />
         </div>
     );
 

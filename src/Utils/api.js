@@ -8,6 +8,13 @@ export const getArticles = (topic, sort_by, order) => {
         return res.data;
     });
 };
+export const getArticlesBySlug = (topic) => {
+    return articlesApi.get(`/articles?topic=${topic}`).then((res) => {
+        return res.data;
+    });
+};
+
+
 export const getTopics = () => {
     return articlesApi.get('/topics').then((res) => {
         return res.data;
@@ -44,6 +51,7 @@ export const getUsers = () => {
 
 export const delComment = (comment_id) => {
     return articlesApi.delete(`/comments/${comment_id}`).then((res) => {
+        console.log(res);
         return res;
     });
 }

@@ -7,7 +7,6 @@ const Header = () => {
     return (
         <div >
 
-            <NavBar />
             <header className="Header p-2 mt-4" >
 
                 <Link to='/' className='Header_Link'>
@@ -18,6 +17,7 @@ const Header = () => {
                 <br />
                 <br />
             </header>
+            <NavBar />
         </div>
     );
 };

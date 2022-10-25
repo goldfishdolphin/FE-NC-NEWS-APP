@@ -62,8 +62,9 @@ nav a:active {
  vote_msg{
   color: red;
 }
-User_card{
- display:inline
+users{
+ background-color: #bb4c4c;
+
 }
 .App.profile_img{
   border-radius: 50%;

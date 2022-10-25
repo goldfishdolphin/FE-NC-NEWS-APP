@@ -4,7 +4,6 @@ import ArticlesByTopic from "../Components/ArticlesByTopic";
 const ArticlesByTopicPage = () => {
     return (
         <div>
-
             <ArticlesByTopic />
         </div>
     );

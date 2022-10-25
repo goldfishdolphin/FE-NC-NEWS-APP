@@ -5,8 +5,6 @@ const Article = () => {
         <div>
             <IndividualArticle />
         </div>
-
-
     );
 };
 export default Article;

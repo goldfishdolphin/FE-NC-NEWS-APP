@@ -18,8 +18,8 @@ import Container from 'react-bootstrap/Container';
 function App() {
   const value = useContext(UserContext);
   return (
-    <Container>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Container>
         <div className="App">
           <Header />
           <Routes>
@@ -34,8 +34,8 @@ function App() {
             {/* <Route path="/articles/notAnId" element={<NonExistingArticle />}></Route> */}
           </Routes>
         </div>
-      </BrowserRouter >
-    </Container>
+      </Container>
+    </BrowserRouter >
   );
 }
 

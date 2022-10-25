@@ -44,9 +44,9 @@ const IndividualArticle = () => {
                 <li>Topic: {article.topic}</li>
                 <li>Comments Count: {article.comment_count}</li>
                 <li>Votes :
-                    <Button className='p-1 m-2' variant='success' onClick={() => handleVotesIncrement(article.article_id)}>{votesInc}<span aria-label={`votes for article ${article.title}`}> 👍</span></Button></li>
+                    <Button className='p-1 m-2' variant='success' onClick={() => handleVotesIncrement(article.article_id)}>{votesInc}<span aria-label={`votes for article ${article.title}`} role='img'> 👍</span></Button></li>
                 <p id='vote_msg'>{votesMsg}</p>
-                <Link to={`/articles/${article.article_id}/comments`}>View Comments ✍️ </Link>
+                <Link to={`/articles/${article.article_id}/comments`}>View Comments <span role='img' aria-label="write comment"> ✍️ </span></Link>
             </ul>
         </Card>
     );

@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticle, patchArticle } from "../Utils/api";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import moment from "moment";
 import { Link } from "react-router-dom";
 
@@ -34,23 +36,19 @@ const IndividualArticle = () => {
 
     }, [article_id]);
     return (
-        <main className="article_main">
+        <Card>
             <h4>{article.title}</h4>
             <ul key={article.article_id}>
                 <li>author: {article.author}</li>
                 <li> {moment(article.created_at).format('dddd, MMMM Do YYYY')}</li>
                 <li>Topic: {article.topic}</li>
                 <li>Comments Count: {article.comment_count}</li>
-                <li>Votes :{votesInc}</li>
-                <button onClick={() => handleVotesIncrement(article.article_id)}>{votesInc}<span aria-label={`votes for article ${article.title}`}> 👍</span></button>
+                <li>Votes :
+                    <Button className='p-1 m-2' variant='success' onClick={() => handleVotesIncrement(article.article_id)}>{votesInc}<span aria-label={`votes for article ${article.title}`}> 👍</span></Button></li>
                 <p id='vote_msg'>{votesMsg}</p>
                 <Link to={`/articles/${article.article_id}/comments`}>View Comments ✍️ </Link>
-
-
             </ul>
-
-
-        </main >
+        </Card>
     );
 };
 export default IndividualArticle;

@@ -20,17 +20,19 @@ const Users = () => {
     }
 
     return (
-        <ul >
-            {users.map((user) => {
-                return (
-                    <li className="User_card" key={user.username}>
-                        <img src={user.avatar_url} alt={`${user.username}'s avatar`}></img>
-                        <p>{user.name}</p>
-                        <button onClick={() => setLoggedInUser(user)}>Log In</button>
-                    </li>
-                );
-            })}
-        </ul>
+        <section className="User_card">
+            <ul >
+                {users.map((user) => {
+                    return (
+                        <li key={user.username}>
+                            <img src={user.avatar_url} alt={`${user.username}'s avatar`}></img>
+                            <p>{user.name}</p>
+                            <button onClick={() => setLoggedInUser(user)}>Log In</button>
+                        </li>
+                    );
+                })}
+            </ul>
+        </section>
     );
 };
 export default Users;

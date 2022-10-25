@@ -12,27 +12,30 @@ import Users from './Components/Users';
 import { useContext } from 'react';
 import { UserContext } from './contexts/User';
 import NonExistingPage from './Pages/NonExistingPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
 
 function App() {
   const value = useContext(UserContext);
   return (
-    <BrowserRouter>
-      <div className="App">
-        <button onClick={() => { value.setLoggedInUser(null); }}>Log out</button>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />}>  </Route>
-          <Route path='/articles' element={<Articles />}>  </Route>
-          <Route path='/topics' element={<TopicsPage />}>  </Route>
-          <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>
-          <Route path='/articles/:article_id' element={<Article />}>  </Route>
-          <Route path='/articles/:article_id/comments' element={<Comments />}>  </Route>
-          <Route path='/users' element={<Users />}>  </Route>
-          <Route path="*" element={<NonExistingPage />}></Route>
-          {/* <Route path="/articles/notAnId" element={<NonExistingArticle />}></Route> */}
-        </Routes>
-      </div>
-    </BrowserRouter >
+    <Container>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />}>  </Route>
+            <Route path='/articles' element={<Articles />}>  </Route>
+            <Route path='/topics' element={<TopicsPage />}>  </Route>
+            <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>
+            <Route path='/articles/:article_id' element={<Article />}>  </Route>
+            <Route path='/articles/:article_id/comments' element={<Comments />}>  </Route>
+            <Route path='/users' element={<Users />}>  </Route>
+            <Route path="*" element={<NonExistingPage />}></Route>
+            {/* <Route path="/articles/notAnId" element={<NonExistingArticle />}></Route> */}
+          </Routes>
+        </div>
+      </BrowserRouter >
+    </Container>
   );
 }
 

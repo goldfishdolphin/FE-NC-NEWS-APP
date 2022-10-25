@@ -33,7 +33,7 @@ const Comments = () => {
                         <li key={comment.comment_id}>
                             <p>posted by: {comment.author}</p>
                             <p>{comment.body}</p>
-                            <p className="emo">✍️</p>
+                            <span role="img"> ✍️</span>
                             <p>{' '}</p>
                             {comment.author === loggedInUser.username ? (<button onClick={(e) => { handleDeleteComment(e, comment.comment_id); }}>Delete</button>) : ("")}
 

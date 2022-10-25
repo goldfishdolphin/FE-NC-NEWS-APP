@@ -1,11 +1,11 @@
 import React from "react";
 import IndividualArticle from "../Components/IndividualArticle";
-import Nav from "../Components/Nav";
+import Nav from "../Components/NavBar";
 
 const Article = () => {
     return (
         <div>
-            <Nav />
+
             <IndividualArticle />
 
         </div>

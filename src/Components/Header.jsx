@@ -1,22 +1,24 @@
 import React from "react";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { UserContext } from "../contexts/User";
+import NavBar from "./NavBar";
+
 const Header = () => {
-    const { loggedInUser } = useContext(UserContext);
+
     return (
-        <header className="Header">
-            <Link to='/' className='Header_Link'>
+        <div >
 
-                <h1>NC NEWS</h1>
-            </Link>
+            <NavBar />
+            <header className="Header p-2 mt-4" >
 
-            <section className="profile_img">
-                <img src={loggedInUser.avatar_url} alt={`avatar of ${loggedInUser.name}`}></img>
-                <p>Logged In :{loggedInUser.username}</p>
+                <Link to='/' className='Header_Link'>
 
-            </section>
-        </header>
+
+                    <h1 class="fa-solid fa-beat">NC NEWS</h1>
+                </Link>
+                <br />
+                <br />
+            </header>
+        </div>
     );
 };
 export default Header;

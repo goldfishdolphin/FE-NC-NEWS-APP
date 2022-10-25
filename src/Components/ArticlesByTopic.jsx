@@ -24,7 +24,7 @@ const ArticlesByTopic = () => {
                             <p>Topic: {article.topic}</p>
                             <p>Votes: {article.votes}</p>
                             <p>Created At: {moment(article.created_at).format('dddd, MMMM Do YYYY')}</p>
-                            <Link to={`articles/${article.article_id}`}>Read </Link>
+                            <Link to={`/articles/${article.article_id}`}>Read </Link>
 
                         </div>
                     );

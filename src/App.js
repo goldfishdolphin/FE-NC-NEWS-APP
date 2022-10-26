@@ -19,7 +19,7 @@ function App() {
   const value = useContext(UserContext);
   return (
     <BrowserRouter>
-      <Container className="App">
+      <Container className="App " style={{ 'background-color': '#DBDAE0', "min-height": "100vh" }}>
         <Header />
         <Routes>
           <Route path='/' element={<Home />}>  </Route>

@@ -10,12 +10,9 @@ const Header = () => {
             <header className="Header p-2 mt-4" >
 
                 <Link to='/' className='Header_Link'>
-
-
                     <h1 class="fa-solid fa-beat">NC NEWS</h1>
                 </Link>
-                <br />
-                <br />
+
             </header>
             <NavBar />
         </div>

@@ -1,5 +1,9 @@
 body {
-  background-color: #e1e5f2
+  background-color: #DBDAE0
+}
+App{
+  background-color: #DBDAE0;
+  min-height: 100vh;
 }
 ul {
   list-style: none;

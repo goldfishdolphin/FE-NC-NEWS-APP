@@ -33,7 +33,6 @@ const IndividualArticle = () => {
     useEffect(() => {
         getArticle(article_id)
             .then(({ article }) => {
-                console.log(article);
                 setArticle(article);
                 setVotesInc(article.votes);
             });

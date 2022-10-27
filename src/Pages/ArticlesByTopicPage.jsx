@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "../Components/NavBar";
 import ArticlesByTopic from "../Components/ArticlesByTopic";
 const ArticlesByTopicPage = () => {
     return (

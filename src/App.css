@@ -1,11 +1,12 @@
-body {
-  background-color: #DBDAE0
+html{
+  background-color: #DBDAE0;
 }
 App{
-  background-color: #DBDAE0;
   min-height: 100vh;
+
 }
 ul {
+
   list-style: none;
 }
 Header {
@@ -15,6 +16,7 @@ Header {
   font-weight: 900;
   background-color: #022b3a;
   color: white;
+  margin-top: 0;
 }
 Header:link{
   color: red;

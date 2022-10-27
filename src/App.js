@@ -16,7 +16,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 
 function App() {
-  const value = useContext(UserContext);
   return (
     <BrowserRouter>
       <Container className="App " style={{ 'background-color': '#DBDAE0', "min-height": "100vh" }}>

@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import { getComments, delComment } from "../Utils/api";
 import CommentAdder from "./CommentAdder";
 import { UserContext } from "../contexts/User";
+import Button from "react-bootstrap/Button";
+import { Container, Card } from "react-bootstrap";
 
 const Comments = () => {
     const [comments, setComments] = useState([]);
@@ -24,26 +26,26 @@ const Comments = () => {
 
 
     return (
-        <section id="comments">
-            <h3>Comments</h3>
+        <Container style={{ 'background-color': '#white' }} >
             <CommentAdder setComments={setComments} />
-            <ol className="comments_list">
+
+            <ol className="text-center">
                 {comments.map((comment) => {
                     return (
-                        <li key={comment.comment_id}>
+                        <Card className="p-1" style={{ 'margin-right': '30px' }}>
+
                             <p>posted by: {comment.author}</p>
                             <p>{comment.body}</p>
                             <span role="img"> ✍️</span>
                             <p>{' '}</p>
-                            {comment.author === loggedInUser.username ? (<button onClick={(e) => { handleDeleteComment(e, comment.comment_id); }}>Delete</button>) : ("")}
+                            {comment.author === loggedInUser.username ? (<Button onClick={(e) => { handleDeleteComment(e, comment.comment_id); }}>
+                                Delete</Button>) : ("")}
 
-                        </li>
+                        </Card>
                     );
                 })}
-
-
             </ol>
-        </section>
+        </Container>
     );
 };
 export default Comments;

@@ -1,6 +1,4 @@
-html{
-  background-color: #DBDAE0;
-}
+
 App{
   min-height: 100vh;
 
@@ -16,6 +14,7 @@ Header {
   font-weight: 900;
   background-color: #022b3a;
   color: white;
+  margin: 0;
   margin-top: 0;
 }
 Header:link{

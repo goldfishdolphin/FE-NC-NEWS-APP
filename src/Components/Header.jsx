@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div >
 
-            <header className="Header p-2 mt-4" >
+            <header className="Header" >
 
                 <Link to='/' className='Header_Link'>
                     <h1 class="fa-solid fa-beat">NC NEWS</h1>

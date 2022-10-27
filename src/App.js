@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header';
-import Articles from './Pages/Articles';
+import AllArticles from './Components/AllArticles';
 import Home from './Pages/Home';
 import TopicsPage from './Pages/TopicsPage';
 import ArticlesByTopicPage from './Pages/ArticlesByTopicPage';
@@ -23,7 +23,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />}>  </Route>
-          <Route path='/articles' element={<Articles />}>  </Route>
+          <Route path='/articles' element={<AllArticles />}>  </Route>
           <Route path='/topics' element={<TopicsPage />}>  </Route>
           <Route path='/topics/:topic' element={<ArticlesByTopicPage />}>  </Route>
           <Route path='/articles/:article_id' element={<Article />}>  </Route>

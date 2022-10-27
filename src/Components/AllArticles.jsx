@@ -6,7 +6,7 @@ import moment from 'moment';
 import Sortby from "./Sortby";
 import { useSearchParams } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 
 const AllArticles = () => {
@@ -29,20 +29,21 @@ const AllArticles = () => {
 
         <main id="articles_main">
             <Sortby />
-            <ul>
+            <ul style={{ 'margin-right': '2rem' }}>
                 {articles.map((article) => {
                     return (
-                        <div>
+                        <Card style={{ 'background-color': '#DBDAE0', 'margin-top': '10px', 'padding': '50px', 'border': 'dashed' }} className='text-center'>
                             <li key={article.article_id}>
                                 <h3>{article.title}</h3>
                                 <p>author: {article.author}</p>
                                 <p> {moment(article.created_at).format('dddd, MMMM Do YYYY')}</p>
                                 <p>Topic: {article.topic}</p>
+                                <Button variant='dark' >
+                                    <Link to={`/articles/${article.article_id}`} className="text-white">View Details
+                                    </Link>
+                                </Button>
                             </li>
-
-                            <Link to={`/articles/${article.article_id}`}>View Details
-                            </Link>
-                        </div>
+                        </Card>
 
                     );
                 })}

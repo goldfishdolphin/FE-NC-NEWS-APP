@@ -28,7 +28,7 @@ const AllArticles = () => {
 
         <main id="articles_main">
             <Sortby />
-            <ul style={{ 'margin-right': '2rem' }}>
+            <ul style={{ 'margin-right': '2rem', 'list-style': 'none' }}>
                 {articles.map((article) => {
                     return (
                         <Card style={{ 'background-color': '#DBDAE0', 'margin-top': '10px', 'padding': '30px', 'border': 'dashed' }} className='text-center'>

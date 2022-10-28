@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 const Sortby = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -26,6 +27,7 @@ const Sortby = () => {
                 <option value={'author'}>Author</option>
                 <option value={'topic'}>Topic</option>
             </select>
+            <br />
             <label htmlFor="order">Order by</label>
             <select name="order"
                 id="choose_order"
@@ -37,7 +39,7 @@ const Sortby = () => {
                 <option value='desc'>Desecending Order</option>
                 <option value='asc'>Ascending Order</option>
             </select>
-            <button type='submit'>Sort</button>
+            <Button type='submit' className="m-1">Sort</Button>
         </form>
 
     );

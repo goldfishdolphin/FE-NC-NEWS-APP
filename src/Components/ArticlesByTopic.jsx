@@ -32,16 +32,13 @@ const ArticlesByTopic = () => {
                                     <p>Created At: {moment(article.created_at).format('dddd, MMMM Do YYYY')}</p>
                                     <Button className="text-center" variant="outline-success" >
                                         <Link className='text-black' to={`/articles/${article.article_id}`}>Read </Link></Button>
-
                                 </div>
                             </Col>
                         );
-
                     })}
                 </ul>
-
             </main>
-        </Row >
+        </Row>
     );
 };
 export default ArticlesByTopic;

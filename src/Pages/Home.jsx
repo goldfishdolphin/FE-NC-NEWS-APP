@@ -12,8 +12,8 @@ const Home = () => {
                 <Card.Img src={News} alt="Card image" className="" style={{ height: "100%", width: "100% " }} />
                 <Card.ImgOverlay>
                     <Card.Title className="text-center" style={{ fontSize: 32, }}>Welcome to Home!</Card.Title>
-                    <br /><br /><br /><br /><br /> <br /><br /><br /><br /><br /> <br />
-                    <Button className='p-1' variant="primary" style={{ fontSize: 20, textAlign: 'center' }} >
+                    <br /><br /><br /><br /><br /><br />
+                    <Button className='p-3 m-2' size='lg' variant="dark" style={{ fontSize: 20, textAlign: 'center' }} >
                         <Link className="text-center text-white" to={'/articles'}>
                             Enter
                         </Link>

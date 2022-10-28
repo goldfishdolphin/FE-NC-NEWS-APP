@@ -36,7 +36,7 @@ const Comments = () => {
 
                             <p>posted by: {comment.author}</p>
                             <p>{comment.body}</p>
-                            <span role="img"> ✍️</span>
+                            <span role="img" aria-label='hand-written'> ✍️</span>
                             <p>{' '}</p>
                             {comment.author === loggedInUser.username ? (<Button onClick={(e) => { handleDeleteComment(e, comment.comment_id); }}>
                                 Delete</Button>) : ("")}

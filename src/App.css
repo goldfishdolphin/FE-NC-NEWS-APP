@@ -77,3 +77,6 @@ nav{
     color: white;
     --bs-link-hover-color: #f8f9fa;
   }
+.accordion-item{
+  background-color: #006d77;
+}

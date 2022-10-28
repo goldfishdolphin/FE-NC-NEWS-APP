@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import moment from "moment";
-import { Link } from "react-router-dom";
 import Comments from "./Comments";
 import Container from "react-bootstrap/Container";
 
@@ -60,7 +59,7 @@ const IndividualArticle = () => {
                 <Accordion className="text-center" >
                     <Accordion.Item eventKey="0">
                         <Accordion.Header className="d-grid gap-4">
-                            <Button className="text-center">
+                            <Button className="text-center" >
                                 Read and Post Comments
                             </Button>
                         </Accordion.Header>

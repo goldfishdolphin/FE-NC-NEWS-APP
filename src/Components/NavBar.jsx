@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -30,7 +29,7 @@ const NavBar = () => {
                                 className="d-inline-block align-top"
                             />
                             <Navbar.Text className="p-1">{'Logged In: '}{loggedInUser.username}
-
+                                <br />
                                 <Button className='m-2' onClick={() => { value.setLoggedInUser(null); }}>Log out</Button>
                             </Navbar.Text>
                         </Navbar.Brand>

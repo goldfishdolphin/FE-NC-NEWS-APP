@@ -43,7 +43,6 @@ const AllArticles = () => {
                                 </Button>
                             </li>
                         </Card>
-
                     );
                 })}
             </ul>

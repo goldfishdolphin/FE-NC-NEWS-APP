@@ -9,4 +9,7 @@ Step 2
 npm install
 
 Step 3
-npm Start
+npm start
+
+The app is deployed on Netlify 
+https://northcoders-nc-news-app.netlify.app/

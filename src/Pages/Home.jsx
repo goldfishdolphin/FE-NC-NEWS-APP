@@ -7,23 +7,20 @@ import { Button } from "react-bootstrap";
 
 const Home = () => {
     return (
-        <Container className='' >
-            <Card className="bg-light text-black ">
+        <Container className='text-center' >
+            <Card className="bg-light text-black " style={{ border: 'none' }}>
                 <Card.Img src={News} alt="Card image" className="" style={{ height: "100%", width: "100% " }} />
                 <Card.ImgOverlay>
-                    <Card.Title className="p-2 text-center" style={{ fontSize: 32, }}>Welcome to Home!</Card.Title>
+                    <Card.Title className="text-center" style={{ fontSize: 32, }}>Welcome to Home!</Card.Title>
+                    <br /><br /><br /><br /><br /> <br /><br /><br /><br /><br /> <br />
+                    <Button className='p-1' variant="primary" style={{ fontSize: 20, textAlign: 'center' }} >
+                        <Link className="text-center text-white" to={'/articles'}>
+                            Enter
+                        </Link>
+                    </Button>
                 </Card.ImgOverlay>
             </Card>
-            <Container className="text-center ">
-                <Button className='p-2' variant="primary" style={{ fontSize: 20, textAlign: 'center' }} >
-                    <Link className="text-center text-white" to={'/articles'}>
-                        Enter
-                    </Link>
-                </Button>
-            </Container>
-
-
-        </Container >
+        </Container>
     );
 };
 

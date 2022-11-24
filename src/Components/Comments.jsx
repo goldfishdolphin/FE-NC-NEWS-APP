@@ -6,7 +6,9 @@ import { getComments, delComment } from "../Utils/api";
 import CommentAdder from "./CommentAdder";
 import { UserContext } from "../contexts/User";
 import Button from "react-bootstrap/Button";
-import { Container, Card } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
+
 
 const Comments = () => {
     const [comments, setComments] = useState([]);
@@ -38,7 +40,7 @@ const Comments = () => {
                             <p>{comment.body}</p>
                             <span role="img" aria-label='hand-written'> ✍️</span>
                             <p>{' '}</p>
-                            {comment.author === loggedInUser.username ? (<Button onClick={(e) => { handleDeleteComment(e, comment.comment_id); }}>
+                            {comment.author === loggedInUser.username ? (<Button size='sm' className='m-4' onClick={(e) => { handleDeleteComment(e, comment.comment_id); }}>
                                 Delete</Button>) : ("")}
 
                         </Card>
@@ -48,4 +50,4 @@ const Comments = () => {
         </Container>
     );
 };
-export default Comments;
+export default Comments;;

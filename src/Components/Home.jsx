@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-import News from "./News.jpg";
+import News from "../Utils/News.jpg";
 import { Button } from "react-bootstrap";
 
 const Home = () => {

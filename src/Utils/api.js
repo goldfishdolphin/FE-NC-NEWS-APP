@@ -1,6 +1,6 @@
 import axios from "axios";
 const articlesApi = axios.create({
-    baseURL: "https://nc-news-july.herokuapp.com/api"
+    baseURL: "https://puzzled-jade-harp-seal.cyclic.app/api"
 });
 
 export const getArticles = (topic, sort_by, order) => {

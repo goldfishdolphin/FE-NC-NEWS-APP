@@ -16,7 +16,7 @@ import IndividualArticle from "./Components/IndividualArticle";
 function App() {
   return (
     <BrowserRouter>
-      <Container className="App " style={{ 'background-color': '#DBDAE0', "min-height": "100vh" }}>
+      <Container className="App " style={{ 'background-color': '#DBDAE0', "min-height": "100vh", }}>
         <Header />
         <Routes>
           <Route path='/' element={<Home />}>  </Route>

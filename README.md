@@ -14,9 +14,7 @@ Github Link : https://github.com/goldfishdolphin/FE-NC-NEWS-APP
 
 ---
 ### Back-end APP
-There is a back-end API version of this app available at :
-
-Hosted Version : https://puzzled-jade-harp-seal.cyclic.app/              
+There is a back-end API version of this app available at :           
 Github Link : https://github.com/goldfishdolphin/NC-News-Backend
 
 

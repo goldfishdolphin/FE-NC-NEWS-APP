@@ -3,12 +3,12 @@
 
 NC NEWS a front-end app is made in React.It connects to the backend API & database to aggregate news articles, topics, comments and users.
 The App is made using React.js, Axios library and Bootstrap. 
-The App is deployed on [Netlify](https://northcoders-nc-news-app.netlify.app).
+
 An agile project management tool, [Trello](https://trello.com/b/UlVwusg5/create-nc-news-app) kanban board, has been used to manage and visualise the progress of the project.
 
 ---
 ### Front-end APP
-Hosted Version : https://northcoders-nc-news-app.netlify.app
+
 
 Github Link : https://github.com/goldfishdolphin/FE-NC-NEWS-APP
 
